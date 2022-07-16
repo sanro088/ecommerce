@@ -1,0 +1,51 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family: 'Poppins',sans-serif;
+}
+
+.brand-logo {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.brand-logo:hover {
+  color: white;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(71,71,255);
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li .nav-link {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li .nav-link:hover:not(.active) {color: rgb(247, 173, 15);}
+  
+  ul.topnav li .nav-link.active { 
+    color: rgb(247, 173, 15);}
+  
+  ul.topnav li.right {float: right;}
+
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+  }

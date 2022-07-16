@@ -1,0 +1,44 @@
+<!-- <!doctype html> -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/sellerDashboard.css">
+        <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <%- include("../partials/sellerNav.ejs") %>
+    </head>
+    <body>
+        <div class="wrapper">
+            <% if(locals.items && items.length > 0){ %>
+                <% for(let i=0;i< items.length;i++){ %>
+                    <div class="card">
+                        <a href="/seller/productInfo/<%=items[i].id%>">
+                            <div class="in-card">
+                            <img src="<%= images[i].imgPath %>" alt={title} class="img"></img>
+                            <h5 class="prod-name"><%= items[i].product_name.substring(0, 20) %></h5>
+                            <% if(items[i].discount > 0){ %>
+                                <h5 style='color:black'>
+                                    ₹ <%= (items[i].price - items[i].discount*(items[i].price)/100).toFixed(2) %>
+                                    <s><span style='color:grey; font-size: 15px' ><%= items[i].price %><span></s>
+                                    <span style="color: #07db00; font-size: 17px;">(<%=items[i].discount%>% off)</span>
+                                </h5>
+                            <% }else{ %>
+                                <h5>₹ <%= items[i].price %></h3>
+                            <% } %>
+                            <h5 style="font-size: 17px;">quantity left- <%= items[i].num_of_items%></h5>
+                        </div>
+                        </a>
+                        <div class="for-btn">
+                            <button class="cart-btn"> <a href="seller/edit/<%=items[i].id%>"> EDIT</a> </button>
+                        </div>
+                    </div>
+                <% } %>
+            <% }else{ %>
+                <h2>Your Store Is Empty Click On Add Item to Add an Item.</h2>
+            <% } %>
+        </div> 
+        <%- include('../partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>

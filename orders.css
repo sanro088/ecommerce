@@ -1,0 +1,95 @@
+/*dropdown button*/
+.dropbtn {
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    background-color: white;
+    float: left; 
+  }
+
+/*Search bar and button*/
+.search {
+    margin: 1.5rem;
+}
+.sbar {
+    max-width: 400px;
+    width: 450%;
+}
+
+
+/*table*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 8rem;
+}
+.orderNum {
+    width: 5rem;
+}
+.customerName {
+    width: 10rem;
+}
+.orderDate {
+    width: 4rem;
+}
+.price {
+    width: 7rem;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  padding-left: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.heading {
+    margin: 1.5rem;
+}
+.order-details {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border-width: 0;
+    color:white;
+    background-color: rgb(208, 208, 247);
+}
+.order-details:hover {
+    color: rgb(248, 168, 19);
+}
+
+/*order details styling*/
+.dispatch {
+    margin: 1.5rem;
+    font-size: 1.1rem;
+}
+
+a.product-info-link{
+    text-decoration: none;
+}
+
+.back-btn{
+    margin: 20px;
+    font-size: 20px;
+}
+.back-btn a{
+    text-decoration: none;
+}
+.no-filter{
+    /* align-items: center; */
+    margin:50px auto;
+    font-size: 20px;
+    text-align: center;
+}
+.no-filter a{
+    margin: 30px 0;
+}

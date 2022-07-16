@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+
+.cont{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: minmax(300px,1fr);
+    margin: 3rem 10px;
+    justify-content: center;
+    
+    
+}
+
+.image-area {
+    margin-top: 2rem;
+    object-fit: cover;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.img {
+    display: inline-block;
+    max-width: 400px;
+    max-height: 500px;
+}
+
+.Infocont {
+    font-family: "Rasa", serif;
+    color: #00344b;
+    margin-left: 2rem;
+    font-family: Montserrat, sans-serif;
+    
+}
+
+p{
+    line-height: 25px;
+}
+
+.amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-area{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.button-area button{
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+button:disabled,
+button[disabled]{
+    cursor: not-allowed;
+}
+
+.toWishlist a{
+    text-decoration: none;
+    color: white;
+}
+
+.button-area .btn1{
+    margin: 5px 5px 5px 0;
+}
+
+.button-area .btn2{
+    margin: 5px 0 5px 0;
+}
+
+
+.toWishlist,.removefromWishlist{
+    background-color: rgb(71,71,255);
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: all .2s ease;
+    color: #fff;
+    outline: none;
+}
+button.cart-btn.toCart.similarItemCartBtn{
+    width: 100%;
+}
+
+.similarProudctHeading{
+    margin-left: 50px;
+}
+
+.removefromWishlist{
+    background-color: rgb(195, 55, 55);
+}
+.removefromWishlist:hover{
+    background-color: rgb(195, 55, 55,.8);
+}
+.toWishlist:hover{
+    background-color: rgb(71,71,255,.8);
+    /* color: rgb(0, 0, 0); */
+}
+
+.toCart:hover{
+    background-color: rgb(71,71,255,.8);
+    /* color: rgb(0, 0, 0); */
+}
+
+.toCart{
+    background-color: rgb(71,71,255);
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: all .2s ease;
+    color: #fff;
+    outline: none;
+}
+
+
+.upload-btn{
+    color: white;
+    background-color: rgb(71,71,255);
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    border-radius: 40px;
+}
+.uploadImage{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.upload-btn:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* container for uploaded image */
+.slide-cont{
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+img{
+    max-height: 500px;
+}
+.slide-cont .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .slide-cont .slide.fade {
+    animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  
+  .slide-cont .slide img {
+    width: 100%;
+  }
+
+
+.dots-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dots-cont .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border-radius: 50%;
+  background-color: #dfd6ce;
+}
+
+.dots-cont .dot.active {
+  border: 2px solid rgb(71, 71, 255);
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .uploadImage{
+        margin-bottom: 30px;
+    }
+}
+
+.cart-btn{
+    outline: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.cart-btn .fa-shopping-cart {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -20%;
+    font-size: 1.6em;
+    transform: translate(-50%, -50%)
+}
+.cart-btn .fa-square {
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    left: 53%;
+    font-size: 0.8em;
+    transform: translate(-50%, -50%)
+}
+.cart-btn span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%)
+}
+.cart-btn span.added {
+    opacity: 0
+}
+.cart-btn.clicked .fa-shopping-cart {
+    animation: cart 2s ease-in forwards
+}
+.cart-btn.clicked .fa-square {
+    animation: box 2s ease-in forwards
+}
+.cart-btn.clicked span.add-to-cart {
+    animation: addcart 2s ease-in forwards
+}
+
+.cart-btn.clicked span.added {
+    animation: added 2s ease-in forwards
+}
+
+.cart-btn.clicked {
+    animation: bg 2s ease-in forwards
+}
+@keyframes bg{
+    from{
+        background-color: rgb(71,71,246);
+    }
+    to{
+        background-color: #3cbd37;
+    }
+}
+
+@keyframes cart {
+    0% {
+        left: -10%
+    }
+
+    40%,
+    60% {
+        left: 50%
+    }
+
+    100% {
+        left: 110%
+    }
+}
+
+@keyframes box {
+
+    0%,
+    40% {
+        top: -20%
+    }
+
+    60% {
+        top: 36%;
+        left: 53%
+    }
+
+    100% {
+        top: 40%;
+        left: 112%
+    }
+}
+
+@keyframes addcart {
+
+    0%,
+    30% {
+        opacity: 1
+    }
+
+    30%,
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes added {
+    0%,
+    80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.wrapper{
+    padding: 40px;
+    display:grid;
+    grid-gap: 0.5rem;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.wrapper .card {
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    border: 10px solid #fff;
+    transition: .5s ease;
+}
+
+.in-card{
+    text-align: center;
+}
+
+.img{ 
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* .linktoinfo{
+    text-decoration: none;
+    color: black;
+} */
+
+.card a,.card a:hover{
+    color: black;
+    text-decoration: none;
+}
+.btn-primary:hover{
+    color: white;
+}
+

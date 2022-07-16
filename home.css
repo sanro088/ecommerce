@@ -1,0 +1,14 @@
+.filter-bar {
+    padding: 0.4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    background-color: white;
+}
+
+.search-bar {
+    margin: 1rem;
+}

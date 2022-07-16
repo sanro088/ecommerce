@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/addItem.css">
+<title>Add Items</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
+<body>
+    <%- include("../partials/sellerNav.ejs") %>
+    <form id="form">
+        <div class="add-Item">
+            <div class="uploadImage">
+                <div class="slide-container">
+                </div>
+                <div class="dots-container">
+                </div>
+                <label for="files" class="upload-btn">Upload Images of Product</label>
+                <p class="err-msg">Images Are Required</p>
+                <input id="files" name="photos" accept="image/*" style="display:none;" type="file" multiple>
+            </div>
+            <div class="product-info">
+                <div class="input-box">
+                    <input type="text" name="productName" id="productName" required>
+                    <label for="productName">Product Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="brandName" id="brandName" required>
+                    <label for="brandName">Brand Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="number" min="1" name="price" id="price" required>
+                    <label for="price">Price (Rs.)</label>
+                </div>
+                <div class="input-box">
+                    <input type="number" min="0" name="discount" id="discount" required>
+                    <label for="discount">Discount (%)</label>
+                </div>
+                <div class="input-box">
+                    <input type="number" min="1" name="numberOfItems" id="numberOfItems" required >
+                    <label for="numberOfItems">Number of Items</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="productColour" id="productColour" required>
+                    <label for="productColour">Product Colour</label>
+                </div>
+                <div class="inp-box">
+                    <label for="cars">Category</label>
+                    <select name="category" id="category">
+                        <option value="Grocery">Grocerry</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Footwear">Footwear</option>
+                        <option value="Stationary">Stationary</option>
+                        <option value="Novels">Novels</option>
+                        <option value="Luggage">Luggage</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Cosmetics">Cosmetics</option>
+                        <option value="Health and Medicine">Health And Medicine</option>
+                        <option value="Games">Games</option>
+                        <option value="Home and Kitchen">Home And Kitchen</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <textarea name="description" id="description" rows="1" required></textarea>
+                    <label for="description">Product Description</label>
+                </div>
+            </div>
+        </div>
+        <button class="add-item-btn" type="submit">Add Item</button>
+    </form>
+    <%- include("../partials/footer.ejs") %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="/js/addItem.js"></script>
+</body>
